@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'sqlite'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,6 +42,14 @@ return [
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
+
+
+        'sqlite_testing' => [
+            'driver' => 'sqlite',
+            'database' =>  database_path('testing.sqlite'),
+            'prefix' => '',
+        ],
+
 
         'mysql' => [
             'driver' => 'mysql',
